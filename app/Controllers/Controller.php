@@ -12,8 +12,9 @@ class Controller
     
     public function render(string $name, array $data = []): ResponseInterface
     {
+
         $paths = array(
-            '/var/www/html/app/Views'
+            realpath('../') . '/app/Views'
         );
 
         $edge= new Edge(new EdgeFileLoader($paths));
