@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ce6eb2a8aecc4f42f22f613c4121515",
+    "content-hash": "81bed5645fdc73604aa3c169cf1c60f0",
     "packages": [
         {
             "name": "laminas/laminas-diactoros",
@@ -701,6 +701,57 @@
                 "source": "https://github.com/php-fig/simple-cache/tree/master"
             },
             "time": "2017-10-23T01:57:42+00:00"
+        },
+        {
+            "name": "windwalker/edge",
+            "version": "3.5.23",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ventoviro/windwalker-edge.git",
+                "reference": "f6035a25b2e9f7b3a734730df8953787157e2061"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ventoviro/windwalker-edge/zipball/f6035a25b2e9f7b3a734730df8953787157e2061",
+                "reference": "f6035a25b2e9f7b3a734730df8953787157e2061",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.3"
+            },
+            "require-dev": {
+                "windwalker/dom": "~3.0",
+                "windwalker/test": "~3.0"
+            },
+            "type": "windwalker-package",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Windwalker\\Edge\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.0-or-later"
+            ],
+            "description": "Windwalker Edge package, a blade compatible template engine.",
+            "homepage": "https://github.com/ventoviro/windwalker-edge",
+            "keywords": [
+                "edge",
+                "engine",
+                "framework",
+                "template",
+                "windwalker"
+            ],
+            "support": {
+                "issues": "https://github.com/ventoviro/windwalker-edge/issues",
+                "source": "https://github.com/ventoviro/windwalker-edge/tree/3.5.21"
+            },
+            "time": "2020-08-07T08:02:53+00:00"
         }
     ],
     "packages-dev": [],

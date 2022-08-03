@@ -6,7 +6,7 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Laminas\Diactoros\Response;
 
-class DefaultController
+class DefaultController extends Controller
 {
     /**
      * Controller.
@@ -17,9 +17,7 @@ class DefaultController
      */
     public function index(ServerRequestInterface $request): ResponseInterface
     {
-        $response = new Response;
-        $response->getBody()->write('<h1>Hello, index!</h1>');
-        return $response;
+       return $this->render('welcome');
 
     }
 }
