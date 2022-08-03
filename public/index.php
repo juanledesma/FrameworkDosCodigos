@@ -11,7 +11,7 @@ $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 
 $router = new League\Route\Router;
 
-$router->map('GET', '/',[App\Controllers\DefaultController::class,'index']);
+include '../app/Routes/web.php';
 
 $response = $router->dispatch($request);
 

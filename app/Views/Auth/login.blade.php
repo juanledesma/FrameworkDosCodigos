@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>DosCodigos</title>
+        <title>DosCodigos-Login</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen sm:items-center py-4 sm:pt-0">
-            <h1 class="text-gray-100" > Dos Códigos</h1>
+            <h1 class="text-gray-100" > Dos Códigos - Login</h1>
         </div>
     </body>
 </html>

@@ -6,7 +6,7 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Laminas\Diactoros\Response;
 
-class DefaultController extends Controller
+class AuthController extends Controller
 {
     /**
      * Controller.
@@ -15,9 +15,9 @@ class DefaultController extends Controller
      *
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function index(ServerRequestInterface $request): ResponseInterface
+    public function login(ServerRequestInterface $request): ResponseInterface
     {
-       return $this->render('welcome');
+       return $this->render('Auth/login');
 
     }
 
@@ -28,9 +28,9 @@ class DefaultController extends Controller
      *
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function admin(ServerRequestInterface $request): ResponseInterface
+    public function logout(ServerRequestInterface $request): ResponseInterface
     {
-       return $this->render('admin');
+       return $this->render('welcome');
 
     }
 }
