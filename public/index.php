@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 include '../vendor/autoload.php';
 
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
-
 use Symfony\Component\Dotenv\Dotenv;
 
-$dotenv = new Dotenv();
-$dotenv->load(realpath('../') . '/.env');
+try {
+    $dotenv = new Dotenv();
+    $dotenv->load(realpath('../') . '/.env');
+} catch (\Throwable $th) {
+    die('Archivo .env no encontrado');
+}
 
 $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals(
     $_SERVER,
@@ -24,8 +25,11 @@ $router = new League\Route\Router;
 
 include '../app/Routes/web.php';
 
-$response = $router->dispatch($request);
+try {
+    $response = $router->dispatch($request);
+} catch (\Throwable $th) {
+    die('Ruta no encontrada');
+}
 
 // send the response to the browser
 (new Laminas\HttpHandlerRunner\Emitter\SapiEmitter)->emit($response);
-
