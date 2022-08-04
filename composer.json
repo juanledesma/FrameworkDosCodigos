@@ -15,8 +15,10 @@
         "league/route": "^5.1",
         "laminas/laminas-diactoros": "^2.14",
         "laminas/laminas-httphandlerrunner": "^2.1",
-        "windwalker/edge": "~3.0",
-        "nesbot/carbon": "^2.60"
+        "windwalker/edge": "~3.0"
         
+    },
+    "require-dev": {
+        "symfony/dotenv": "^5.4"
     }
 }
