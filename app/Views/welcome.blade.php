@@ -18,8 +18,8 @@
     </head>
     <body class="antialiased">
         <div class="flex justify-center items-center  min-h-screen">
-            <h1 class="text-3xl font-bold underline ">
-                Dos Códigos
+            <h1 class="text-3xl font-bold ">
+                Hola, {{$_ENV['APP_NAME']}}
               </h1>
         </div>
     </body>

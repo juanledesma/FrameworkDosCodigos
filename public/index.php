@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 include '../vendor/autoload.php';
 
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
-
 use Symfony\Component\Dotenv\Dotenv;
 
 $dotenv = new Dotenv();
@@ -23,6 +20,17 @@ $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 $router = new League\Route\Router;
 
 include '../app/Routes/web.php';
+
+$responseFactory = new Laminas\Diactoros\ResponseFactory();
+
+$jsonStrategy = new League\Route\Strategy\JsonStrategy($responseFactory);
+
+$router->group('/api', function (\League\Route\RouteGroup $router) {
+
+    include '../app/Routes/api.php';
+
+}) ->setStrategy($jsonStrategy);
+
 
 $response = $router->dispatch($request);
 

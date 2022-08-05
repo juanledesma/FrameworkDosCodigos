@@ -25,8 +25,8 @@
     </head>
     <body class="antialiased">
         <div class="flex justify-center items-center  min-h-screen">
-            <h1 class="text-3xl font-bold underline ">
-                Dos Códigos - Admin
+            <h1 class="text-3xl font-bold ">
+                Admin
               </h1>
         </div>
     </body>
