@@ -6,8 +6,12 @@ include '../vendor/autoload.php';
 
 use Symfony\Component\Dotenv\Dotenv;
 
-$dotenv = new Dotenv();
-$dotenv->load(realpath('../') . '/.env');
+try {
+    $dotenv = new Dotenv();
+    $dotenv->load(realpath('../') . '/.env');
+} catch (\Throwable $th) {
+    die('Archivo .env no encontrado');
+}
 
 $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals(
     $_SERVER,
@@ -36,4 +40,3 @@ $response = $router->dispatch($request);
 
 // send the response to the browser
 (new Laminas\HttpHandlerRunner\Emitter\SapiEmitter)->emit($response);
-
