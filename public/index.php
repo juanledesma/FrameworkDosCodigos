@@ -35,8 +35,12 @@ $router->group('/api', function (\League\Route\RouteGroup $router) {
 
 }) ->setStrategy($jsonStrategy);
 
+try {
+    $response = $router->dispatch($request);
+} catch ( \Exception $ex) {
+    die($ex->getMessage());
+} 
 
-$response = $router->dispatch($request);
 
 // send the response to the browser
 (new Laminas\HttpHandlerRunner\Emitter\SapiEmitter)->emit($response);
